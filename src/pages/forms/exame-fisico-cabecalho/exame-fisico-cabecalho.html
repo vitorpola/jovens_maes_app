@@ -1,0 +1,59 @@
+<ion-card>
+  <ion-card-header>Informações Gerais</ion-card-header>
+  <ion-list>
+  	<ion-item>
+        <ion-label dark stacked>Peso</ion-label>
+        <ion-input placeholder="Ex: 50Kg"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Altura</ion-label>
+        <ion-input placeholder="Ex: 1,59m"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>IMC</ion-label>
+        <ion-input type="number" min="0" placeholder="20"> </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Altura Uterina</ion-label>
+        <ion-input placeholder="Ex: 3cm"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Pressão Arterial (PA)</ion-label>
+        <ion-input placeholder="Ex: 120/80 mmHg"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked> Pulso </ion-label>
+        <ion-input placeholder="Ex: 70 bpm"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked> FR </ion-label>
+        <ion-input placeholder="Ex: 20 mpm"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked> Temperatura </ion-label>
+        <ion-input placeholder="Ex: 36°C "></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>DUM</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="Date"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>DPP</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="DPPDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>IG</ion-label>
+        <ion-input placeholder="2 semanas"></ion-input>
+      </ion-item>
+  </ion-list>
+</ion-card>

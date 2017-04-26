@@ -1,0 +1,31 @@
+.split-pane-visible > .split-pane-side {
+    border-right: none !important;
+    max-width: 200px!important;
+    min-width: 200px!important;
+}
+
+.menu-inner ion-content {
+    border-right: 0px!important;
+    background: map-get($colors , dark-cyan);
+    button{
+        background: map-get($colors , dark-cyan);
+        color: #fff;   
+    }
+}
+
+ion-menu{
+    ion-label{
+        font-size: 1.4rem;
+    }
+    .icon{
+        font-size: 1.8rem!important;
+        margin-right: 5px;
+        text-align: center;
+        width: 30px;
+    }
+}
+
+.ion-page .scroll-content{
+    background-color: #ebebeb;
+}
+

@@ -1,0 +1,166 @@
+<!--
+  Generated template for the ExameFisicoGenerico page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-card>
+  <ion-card-header>Exame Físico</ion-card-header>
+
+  <exame-fisico-cabecalho> </exame-fisico-cabecalho>
+
+<ion-card>
+    <ion-card-header>Mamas</ion-card-header>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Mamas simétricas</ion-label>
+        <ion-checkbox [(ngModel)]= "mamassimetricas"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mamas assimétricas</ion-label>
+        <ion-checkbox [(ngModel)]= "mamasassimetricas"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Presença de colostro</ion-label>
+        <ion-checkbox [(ngModel)]= "colostro"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Turgidas</ion-label>
+        <ion-checkbox [(ngModel)]= "turgidas"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sinais de inflamação</ion-label>
+        <ion-checkbox [(ngModel)]= "inflamacao"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Amamentação anterior</ion-label>
+        <ion-checkbox [(ngModel)]= "amamentacaoanterior"></ion-checkbox>
+      </ion-item>
+
+      <ion-item class="subheader-list"> Condição mamilar</ion-item>
+
+      <ion-item>
+        <ion-label>Protuso</ion-label>
+        <ion-checkbox [(ngModel)]= "protuso"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Plano</ion-label>
+        <ion-checkbox [(ngModel)]= "plano"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Invertido</ion-label>
+        <ion-checkbox [(ngModel)]= "invertido"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Abdome</ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-label>Plano</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomeplano"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Globoso</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomegloboso"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Protuso</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomeprotuso"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Flácido</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomeflacido"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Distendido</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomedistendido"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>RHA+</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomerhamais"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>RHA-</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomerhamenos"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Timpânico</ion-label>
+        <ion-checkbox [(ngModel)]= "abdometimpanico"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Maciço</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomemacico"></ion-checkbox>
+      </ion-item>
+      
+      <ion-item class="subheader-list"> Palpação </ion-item>
+      
+      <ion-item>
+        <ion-label dark stacked>Altura uterina</ion-label>
+        <ion-input placeholder="Ex: 5 cm"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Alterações</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomemalteracoes"></ion-checkbox>
+      </ion-item>
+      <ion-item *ngIf="abdomemalteracoes">
+        <ion-label >Quais alterações</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item class="subheader-list"> Sobre o feto </ion-item>
+
+      <ion-item>
+        <ion-label>Movimentação Fetal</ion-label>
+        <ion-checkbox [(ngModel)]= "movimentacaofetal"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Batimentos cardiofetais audiveis</ion-label>
+        <ion-checkbox [(ngModel)]= "batimentoscardiofetais"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Sistema geniturinário</ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-label>Alterações urinárias</ion-label>
+        <ion-checkbox [(ngModel)]= "alteracoesurinarias"></ion-checkbox>
+      </ion-item>
+      <ion-item *ngIf="alteracoesurinarias">
+        <ion-label >Especifique</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Secreção vaginal</ion-label>
+        <ion-checkbox [(ngModel)]= "secrecaovaginal"></ion-checkbox>
+      </ion-item>
+      <ion-item *ngIf="secrecaovaginal">
+        <ion-label >Aspecto</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sangramento</ion-label>
+        <ion-checkbox [(ngModel)]= "sangramento"></ion-checkbox>
+      </ion-item>
+      <ion-item *ngIf="sangramento">
+        <ion-label >Aspecto e características</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+ 
+</ion-card>

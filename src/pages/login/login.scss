@@ -1,0 +1,86 @@
+page-login.ion-page {
+ 
+  .scroll-content{
+    background: map-get($colors , secondary)
+  }
+
+  .logo-row {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .login-box {
+    background: map-get($colors , primary);
+    padding: 20px 20px 0px 20px;
+    margin-top: 0px;
+    border-radius: 3px;
+  }
+
+  .text-input{
+      text-align: left;
+  }
+
+  h1{
+    text-transform: uppercase;
+    color: map-get($colors,pink-dark );
+    margin: 0;
+  }
+
+  .left{
+    height: 70px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .left:nth-child(2){
+    left: 120px;
+  }
+
+  .right{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 70px;
+    float: right;
+  }
+
+  ion-row {
+    align-items: center;
+    text-align: center;
+    ion-col{
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  ion-item {
+      font-size: 0.9em;
+      margin-bottom: 5px;
+      border: 1px solid #ffffff;
+      border-radius: 3px;
+      min-height: 4rem;
+  }
+
+  ion-list{
+    margin-bottom: 0px!important;
+  }
+
+  .signup-col {
+    margin: 0px;
+    padding-bottom: 10px;
+  }
+
+  .item-inner, ion-item{
+      border-bottom: none!important;
+      box-shadow: none!important;
+  }
+
+  .submit-btn {
+    background-color:map-get($colors , pink-dark);
+    color: #fff;
+    margin-top: -5px;
+    border-radius: 3px;
+  }
+
+}

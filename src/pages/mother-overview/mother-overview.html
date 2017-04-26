@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle="menu">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            {{mother.name}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-list>
+		<ion-list-header class="list-title">Próxima Visita</ion-list-header>
+		<button ion-item (click)="onClick(mother.visita)">
+			<ion-avatar item-left>
+	      		<img src="assets/img/6-alternative2.png">
+	    	</ion-avatar>
+			Visita {{mother.visita}} 
+		</button>
+	</ion-list>
+
+	<ion-list>
+		<ion-list-header class="list-title">Visitas Anteriores</ion-list-header>
+		<button ion-item *ngFor="let v of visitasAnteriores" (click)="onClick(v.n)"> 
+			<ion-avatar item-left>
+	      		<img src="{{v.src}}">
+	    	</ion-avatar>
+			{{v.name}} 
+		</button>
+	</ion-list>
+
+</ion-content>

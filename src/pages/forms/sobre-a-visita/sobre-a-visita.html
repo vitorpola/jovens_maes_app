@@ -1,0 +1,76 @@
+<!--
+  Generated template for the TabelaOutros page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-card>
+ 
+  <ion-card-header> Sobre a Visita </ion-card-header>
+  
+  <ion-item>
+	<ion-label>Próximo Agendamento:</ion-label>
+  	<ion-datetime displayFormat="DD/MM/YYYY" pickerFormat = "DDDD MMMM YYYY"[(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+  <ion-item>
+	<ion-label dark>Tempo da visita:</ion-label>
+  	<ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item class="subheader-list">Cuidados com a saúde</ion-item>
+  <ion-item>
+  	<ion-textarea rows="7"></ion-textarea>
+  </ion-item>
+
+  <ion-item class="subheader-list">Saúde Ambiental</ion-item>
+  <ion-item>
+  	<ion-textarea rows="7"></ion-textarea>
+  </ion-item>
+
+  <ion-item class="subheader-list">Curso de Vida</ion-item>
+  <ion-item>
+  	<ion-textarea rows="7"></ion-textarea>
+  </ion-item>
+
+  <ion-item class="subheader-list">Parenting</ion-item>
+  <ion-item>
+  	<ion-textarea rows="7"></ion-textarea>
+  </ion-item>
+
+  <ion-item class="subheader-list">Família</ion-item>
+  <ion-item>
+  	<ion-textarea rows="7"></ion-textarea>
+  </ion-item>
+
+  <ion-item class="subheader-list">Rede Social</ion-item>
+  <ion-item>
+  	<ion-textarea rows="7"></ion-textarea>
+  </ion-item>
+
+  <ion-item class="subheader-list">Impressões pessoais da visitadora</ion-item>
+  <ion-item>
+  	<ion-textarea rows="7"></ion-textarea>
+  </ion-item>
+
+  <ion-item class="subheader-list">Plano para a próxima visita</ion-item>
+  <ion-item>
+  	<ion-textarea rows="7"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Alguém ficou junto com a mãe na visita</ion-label>
+    <ion-checkbox [(ngModel)]= "acompanhante"></ion-checkbox>
+  </ion-item>
+
+  <ion-item *ngIf="acompanhante">
+    <ion-label>Quem?</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Horário Final:</ion-label>
+    <ion-datetime displayFormat="HH:mm"></ion-datetime>
+  </ion-item>
+</ion-card>
+
+<button (click)="confirmButton()" ion-button color="darkred" class="button" id="confirmar">Confirmar</button>

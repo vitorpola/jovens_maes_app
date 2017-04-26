@@ -1,0 +1,750 @@
+<ion-card>
+  <ion-card-header> Preparação da visita </ion-card-header>
+  <ion-list>
+      <ion-item text-wrap [ngSwitch]="visitNumber">
+        <ion-item *ngSwitchCase="1">
+          <b>Conhecendo a cliente:</b>
+          <br><br>
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes
+          familiares, ginecológicos, obstétricos (FICHA BASEADA NO CADERNO DE
+          ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA SAÚDE 2012)
+          <br><br>
+          Discutir questões relativas a gravidez e que ajudem na saúde mental da mãe
+          durante essa fase
+          <a button clear (click)="openPdf('portugal.pdf', 29)"> 
+               (UTILIZAR O ROTEIRO DA PAGINA 27 DO MANUAL DE SAÚDE MENTAL DA GESTANTE / PORTUGAL – ITEM 1 - Como tem corrido a gravidez?)
+          </a>
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Realizar ações que respondam a problemas/necessidades identificados em
+          relação a gravidez. 
+          <a button clear target="_blank" href="https://play.google.com/store/apps/details?id=com.hp.pregnancy.lite&hl=pt"> 
+               (OFERECER O APLICATIVO 'PREGNANCY' PARA
+               QUALQUER DISPOSITIVO – ESSE APLICATIVO OFERECE INFORMAÇÕES
+               SOBRE A EVOLUÇÃO SAUDAVEL DA GRAVIDEZ)
+          </a>
+          <br><br>
+          Discutir a evolução da gravidez/evolução do feto, utilizando vídeos ou outro
+          recurso didático/pedagógico. 
+          <a button clear target="_blank" href="https://play.google.com/store/apps/details?id=com.hp.pregnancy.lite&hl=pt"> 
+               (INDICAR BAIXAR O APLICATIVO 'PREGNANCY'
+               PARA QUALQUER DISPOSITIVO – ESSE APLICATIVO OFERECE
+               INFORMAÇÕES SOBRE A EVOLUÇÃO SAUDAVEL DA GRAVIDEZ.)
+          </a>
+          <a button clear target="_blank" href="http://brasil.babycenter.com/mobile-apps">
+               UTILIZAR O VIDEO SOBRE DESENVOLVIMENTO FETAL DISPONIVEL NO
+               PORTAL BABYCENTER)
+          </a>
+          <br><br>
+          Responder as queixas da gestante em relação a gestação 
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)"> 
+               (CONSULTAR O
+               CADERNO DE ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA
+               SAÚDE 2012 PARA RESPONDER AS DUVIDAS DAS GESTANTES).
+          </a>
+          Discutir o papel de 'mãe' utilizando vídeos ou outro recurso didático/pedagógico.
+          <a button clear target="_blank" href="https://play.google.com/store/apps/details?id=com.playdemic.villagelife.android"> 
+               (OFERECER O JOGO 'VILLAGE LIFE' PARA GESTANTE BAIXAR NO SEU
+               SMARTPHONE')
+          </a>
+        </ion-item>
+
+        <ion-item *ngSwitchCase="2">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes
+          familiares, ginecológicos, obstétricos (UTILIZAR A FICHA BASEADA NO CADERNO
+          DE ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA SAÚDE2012)
+          Conhecendo a rede familiar e de apoio da gestante.Com a finalidade de Identificar
+          desdobramentos da avaliação familiar: conflitos, relacionamentos, laços fortes e fracos
+          (APLICAÇÃO DO GENOGRAMA E ECOMAPA- LIVRO WRIGHT AND LEAHEY, PG 84 -
+          93).
+          <br><br>
+          Discutir as percepções sobre a gravidez 
+          <a button clear (click)="openPdf('portugal.pdf', 30)"> 
+               (UTILIZAR O ROTEIRO DA PAGINA 27 DO
+               MANUAL DE SAÚDE MENTAL DA GESTANTE / PORTUGAL – ITEM 2 - COMO SE
+               SENTIU QUANDO SOUBE QUE ESTAVA GRÁVIDA?)
+          </a>
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Responder as queixas identificadas em relação a gestação. 
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)"> 
+               (CONSULTAR O
+               CADERNO DE ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA
+               SAÚDE2012 PARA RESPONDER AS DUVIDAS DAS GESTANTES) .
+          </a>
+          <br><br>
+          Discutir a evolução da gravidez/evolução do feto, utilizando vídeos ou outro recurso
+          didático/pedagógico. 
+          <a button clear target="_blank" href="https://play.google.com/store/apps/details?id=com.hp.pregnancy.lite&hl=pt"> 
+               (VER SE A GESTANTE ESTÁ UTILIZANDO O APLICATIVO
+               'PREGNANCY' PARA QUALQUER DISPOSITIVO / 
+          </a>
+          <a button clear target="_blank" href="http://brasil.babycenter.com/mobile-apps">
+               UTILIZAR O VIDEO SOBRE
+               DESENVOLVIMENTO FETAL DISPONIVEL NO PORTAL BABYCENTER)
+          </a>
+          Perguntar se ela esta utilizando o 
+          <a button clear target="_blank" href="https://play.google.com/store/apps/details?id=com.playdemic.villagelife.android"> 
+               JOGO 'VILLAGE LIFE'
+          </a> 
+          para verificar se houve interesse.
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado
+          amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a
+          saúde da gestante; como está estruturado o ambiente; como está o curso de vida da
+          gestante; como a família e rede social podem apoiar ou dificultar essas competências;
+          como acesso a serviços de saúde e educação podem apoiar ou dificultar essas
+          competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="3">
+
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes
+          familiares, ginecológicos, obstétricos
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)"> 
+               (FICHA BASEADA NO CADERNO DE ATENÇÃO
+               AO PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA SAÚDE 2012).
+          </a>
+          <br><br>
+          Conhecendo aspectos da gravidez: Como se sentiu quando soube que estava
+          grávida? Quando estava grávida a quem contou primeiro? 
+          <a button clear (click)="openPdf('portugal.pdf', 30)"> 
+               UTILIZARO ROTEIRO DA
+               PAGINA 27 DO MANUAL DE SAÚDE MENTAL DA GESTANTE / PORTUGAL – ITEM
+               3)
+          </a>
+          <br><br>
+          Extrair das gestantes informação sobre seu conhecimento e uso dos recursos da
+          comunidade (FAZER UM MAPEAMENTO DE RECURSOS DA COMUNIDADE OU
+          CONSTRUIR JUNTO COM A GESTANTE).
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Responder as queixas identificadas em relação a gestação. 
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)"> 
+               (CONSULTAR O
+               CADERNO DE ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA
+               SAÚDE2012 PARA RESPONDER AS DUVIDAS DAS GESTANTES).
+          </a>
+          Discutir com a gestante as competências para cuidar de si e do feto, utilizando vídeos
+          e/ou outros recursos. 
+          <a button clear target="_blank" href="https://play.google.com/store/apps/details?id=com.hp.pregnancy.lite&hl=pt"> 
+               (VER SE A GESTANTE ESTÁ UTILIZANDO O APLICATIVO
+               “PREGNANCY”/ 
+          </a>
+          <a button clear target="_blank" href="http://brasil.babycenter.com/mobile-apps">
+               UTILIZAR O VIDEO SOBRE DESENVOLVIMENTO FETAL
+               DISPONIVEL NO PORTAL BABYCENTER)
+          </a>
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado
+          amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a
+          saúde da gestante; como está estruturado o ambiente; como está o curso de vida da
+          gestante; como a família e rede social podem apoiar ou dificultar essas competências;
+          como acesso a serviços de saúde e educação podem apoiar ou dificultar essas
+          competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="4">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes
+          familiares, ginecológicos, obstétricos. 
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)"> 
+               (UTILIZAR FICHA BASEADA NO CADERNO DE
+               ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA SAÚDE2012).
+          </a>
+          <br><br>
+          Aspectos do ambiente doméstico (OBSERVAÇÃO DAS CONDIÇÕES DE MORADIA E
+          DA COMUNIDADE NO QUE SE REFERE: LUZ, ÁGUA, ESGOTO, HIGIENE,
+          VENTILAÇÃO, ASPECTOS DA INFRAESTRUTURA (ACABAMENTOS, PISOS,
+          TORNEIRAS, PORTAS, JANELAS, COZINHA, QUARTO, BANHEIRO)
+          Aspectos sociais (OBSERVAR ÁREA EXTERNA, LOCAIS DE LAZER, VIZINHANÇA,
+          ESCOLAS, RECURSOS DE SEGURANÇA)
+          <br><br>
+          Conhecendo a gravidez: Como o pai reagiu? Como a família reagiu? Quais seus
+          planos para o bebe? Que apoio gostaria de ter depois que o bebê nascer e apoio
+          gostaria de ter? 
+          <a button clear (click)="openPdf('portugal.pdf', 30)"> 
+               (UTILIZAR O ROTEIRO DA PAGINA 27 DO MANUAL DE SAÚDE
+               MENTAL DA GESTANTE / PORTUGAL – ITEM 4, 5 e 6 )
+          </a>
+          Quais os projetos da gestante a curto , médio e longo prazo? Aplicar a Escala de Auto
+          Eficácia.
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Responder as queixas identificadas em relação a gestação.
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)"> 
+               (CONSULTAR O CADERNO DE ATENÇÃO AO PRÉ NATAL DE BAIXO
+               RISCO/MINISTERIO DA SAÚDE2012 PARA RESPONDER AS DUVIDAS DAS
+               GESTANTES).
+          </a>
+          <br><br>
+          Reforçar as competências relativas ao autocuidado da saúde 
+          <a button clear (click)="openPdf('guia-unicef.pdf', 1)"> 
+               (UTILIZAR O GUIA DA
+               UNICEF – FAMÍLIAS FORTALECIDAS) 
+          </a>
+          e ao afeto/vinculo com o feto 
+          <a button clear target="_blank" href="https://play.google.com/store/apps/details?id=com.hp.pregnancy.lite&hl=pt"> 
+          (VER SE A
+          GESTANTE ESTÁ UTILIZANDO O APLICATIVO “PREGNANCY”/ 
+          </a>
+          <a button clear target="_blank" href="http://brasil.babycenter.com/mobile-apps">
+               UTILIZAR O VIDEO
+               SOBRE DESENVOLVIMENTO FETAL DISPONIVEL NO PORTAL BABYCENTER).
+          </a>
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado
+          amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a
+          saúde da gestante; como está estruturado o ambiente; como está o curso de vida da
+          gestante; como a família e rede social podem apoiar ou dificultar essas competências;
+          como acesso a serviços de saúde e educação podem apoiar ou dificultar essas
+          competências
+        </ion-item>
+
+        <ion-item *ngSwitchCase="5">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes
+          familiares, ginecológicos, obstétricos. 
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)"> 
+               (UTILIZAR A FICHA DO CADERNO DE
+               ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA SAÚDE2012).
+          </a>
+          <br><br>
+          Aplicar a escala de Edimburgo.
+          <br><br>
+          Conhecendo a gestante: Como você acha que a chegada do bebê vai afetar: a si? A
+          sua vida familiar? Aos outros membros da família? A sua relação com o pai do bebê?
+          Que mudanças tem notado em si própria desde que engravidou? Como você tem
+          lidado com essas mudanças. 
+          <a button clear (click)="openPdf('portugal.pdf', 31)">
+               (UTILIZARO ROTEIRO DA PAGINA 27 DO MANUAL DE
+               SAÚDE MENTAL DA GESTANTE / PORTUGAL – ITEM 7 e 8)
+          </a>
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Responder as queixas identificadas em relação a gestação
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO PRÉ NATAL DE BAIXO
+               RISCO/MINISTERIO DA SAÚDE 2012 PARA RESPONDER AS DUVIDAS DAS
+               GESTANTES).
+          </a>
+          <br><br>
+          Trabalhar com a gestante competências para auto cuidado da saúde e utilização das
+          redes de apoio. 
+          <a button clear (click)="openPdf('guia-unicef.pdf', 1)">
+               (UTILIZAR O GUIA DA UNICEF – FAMÍLIAS FORTALECIDAS
+          </a>
+               / 
+          <a button clear target="_blank" href="https://play.google.com/store/apps/details?id=com.hp.pregnancy.lite&hl=pt"> 
+               VER SE A GESTANTE ESTÁ UTILIZANDO O APLICATIVO “PREGNANCY”
+          </a>
+               / 
+          <a button clear target="_blank" href="http://brasil.babycenter.com/mobile-apps">
+               UTILIZAR O
+               VIDEO SOBRE DESENVOLVIMENTO FETAL DISPONIVEL NO PORTAL
+               BABYCENTER).
+          </a>
+          <br><br>
+          Conversar sobre direitos da gestante "Direito ao pré-natal de qualidade" e "Como
+          garantir direitos sociais" 
+          <a button clear (click)="openPdf('guia-unicef.pdf', 1)">
+               (UTILIZAR GUIA GESTANTE BEBÊ - UNICEF 2011
+          </a>
+          E
+          <a button clear (click)="openPdf('pre-natal.pdf', 284)">
+               CAPÍTULO 10 DE DIREITOS SOCIAIS DO MANUAL DE PRÉ-NATAL DE BAIXO
+               RISCO 
+          </a>
+          -
+          <a button clear (click)="openPdf('bolsa-familia.pdf', 1)">
+               CONFORME NECESSIDADE UTILIZAR O MANUAL DO BOLSA FAMÍLIA)
+          </a>
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado
+          amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a
+          saúde da gestante; como está estruturado o ambiente; como está o curso de vida da
+          gestante; como a família e rede social podem apoiar ou dificultar essas competências;
+          como acesso a serviços de saúde e educação podem apoiar ou dificultar essas
+          competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="6">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes
+          familiares, ginecológicos, obstétricos. 
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (UTILIZAR FICHA BASEADA NO CADERNO DE
+               ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA SAÚDE 2012).
+          </a>
+          <br><br>
+          Qual o vinculo da mãe com o feto/bebê? Do pai com o feto/bebê? Aplicar a Escala de
+          Apego Fetal.
+          <br><br>
+          Melhoria nas relações familiares e a utilização dos recursos sociais (PERGUNTAR
+          COMO TEM SIDO A PARTICIPAÇÃO DA FAMÍLIA DURANTE A GRAVIDEZ;
+          RETOMAR MAPA DE RECURSOS SOCIAIS E PERGUNTAR SE A GESTANTE ESTA
+          ACESSANDO ESSES RECURSOS QUANDO NECESSÁRIO)
+          <br><br>
+          Planejamento que a gestante para sua vida a curto e médio prazo (INICIAR
+          CONVERSA SOBRE PROJETO DE VIDA A PARTIR DA AVALIAÇÃO REALIZADA
+          PELA ESCALA DE AUTO-EFICÁCIA EM VISITA ANTERIOR)
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as
+          queixas identificadas em relação a gestação
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE
+               ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA SAÚDE 2012 PARA
+               RESPONDER AS DUVIDAS DAS GESTANTES).
+          </a>
+
+          <br><br>Oferecer o "DIARIO MÃE E BEBÊ",
+          propor que a gestante use para escrever suas duvidas, vivencias, percepções e
+          emoções e que possa compartilhar com a visitadora na visita seguinte o conteúdo que
+          desejar.
+          <br><br>
+          Fortalecer competências para o cuidado da criança 
+          <a button clear (click)="openPdf('guia-unicef.pdf', 1)">
+               (UTILIZAR O GUIA DA UNICEF – FAMÍLIAS FORTALECIDAS
+          </a>
+          / 
+          <a button clear target="_blank" href="https://play.google.com/store/apps/details?id=com.hp.pregnancy.lite&hl=pt"> 
+               VER SE A GESTANTE ESTÁ UTILIZANDO O
+               APLICATIVO “PREGNANCY”
+          </a>
+          / 
+          <a button clear target="_blank" href="http://brasil.babycenter.com/mobile-apps">
+               UTILIZAR O VIDEO SOBRE DESENVOLVIMENTO
+               FETAL DISPONIVEL NO PORTAL BABYCENTER
+          </a>
+
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado
+          amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a
+          saúde da gestante; como está estruturado o ambiente; como está o curso de vida da
+          gestante; como a família e rede social podem apoiar ou dificultar essas competências;
+          como acesso a serviços de saúde e educação podem apoiar ou dificultar essas
+          competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="7">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes
+          familiares, ginecológicos, obstétricos. 
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (UTILIZAR FICHA BASEADA NO CADERNO
+               DE ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA SAÚDE 2012).
+          </a>
+          <br><br>
+          Perguntar "Que mudanças tem notado em si própria desde que engravidou?"
+          <a button clear (click)="openPdf('portugal.pdf', 32)">
+               (UTILIZAR O ROTEIRO DA PAGINA 27 DO MANUAL DE SAÚDE MENTAL DA
+               GESTANTE / PORTUGAL – ITEM 10)
+          </a>
+          <br><br>
+          Conversar sobre as competências para percepção do próprio corpo, alterações e
+          autocuidado.
+          <br><br>
+          Fazer com que as clientes explorem suas expectativas de paternidade e suas próprias
+          experiências da infância durante a gravidez utilizando técnicas motivacionais.
+          ( MATERIAL)
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Execução do plano terapêutico. Perguntar sobre o uso da "DIARIO MÃE E BEBÊ" e
+          dar espaço para compartilhar seu conteúdo.
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as queixas
+          identificadas em relação a gestação
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO
+               PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA SAÚDE 2012 PARA RESPONDER
+               AS DUVIDAS DAS GESTANTES).
+          </a>
+          <br><br>
+          Fortalecer competências para alimentação saudável (FAZER UM RECORDATÓRIO
+          ALIMENTAR E 
+          <a button clear (click)="openPdf('guia-alimentar.pdf', 1)">
+               UTILIZAR GUIA ALIMENTAR DA POPULAÇÃO BRASILEIRA DE 2014
+               PARA ORIENTAÇÃO)
+          </a>
+          <br><br>
+          Fortalecer as competências maternas 
+          <a button clear (click)="openPdf('guia-unicef.pdf', 1)">
+               (UTILIZAR O GUIA DA UNICEF – FAMÍLIAS
+               FORTALECIDAS)
+          </a>
+          <br><br>
+          Fortalecer vínculo: Colocar música relaxante, com uso de um óleo de amêndoas ou
+          aquele que a gestante tiver disponível ou acostumada fazer movimentos na barriga.
+          Fazer massagem com as pontas dos dedos no sentido horário do sentido distal até
+          chegar ao umbigo. Após com seu auxílio pedir para gestante ir sentindo algumas
+          partes do bebê que seja possível sentir e ir conversando com ele nesse momento.
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado
+          amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a
+          saúde da gestante; como está estruturado o ambiente; como está o curso de vida da
+          gestante; como a família e rede social podem apoiar ou dificultar essas competências;
+          como acesso a serviços de saúde e educação podem apoiar ou dificultar essas
+          competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="8">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes
+          familiares, ginecológicos, obstétricos. (FICHA)
+          <br><br>
+          Avaliar a casa para a presença de riscos que podem comprometer o bem-estar da
+          cliente e do bebê e garante que o cliente tenha conhecimento dos perigos à saúde e
+          ações preventivas básicas (OBSERVAR PRESENÇA DE MOFO, BOLOR,
+          ILUMINAÇÃO ADEQUADA, VENTILAÇÃO ADEQUADA, DENSIDADE DOMICILIAR,
+          RISCO DE QUEDA).
+          <br><br>
+          Trabalhar com a gestante para garantir que o lar seja um ambiente seguro e propício
+          para a sua saúde e saúde e desenvolvimento da criança .
+          Discutir outros fatores de risco para o parto prematuro / baixo peso ao nascer (por
+          exemplo, infecções do trato geniturinário, pré-eclâmpsia)
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Execução do plano terapêutico. Perguntar sobre o uso da "DIARIO
+          MÃE E BEBÊ" e dar espaço para compartilhar seu conteúdo.
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as queixas
+          identificadas em relação a gestação
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO
+               PRÉ NATAL DE BAIXO RISCO/MINISTERIO DA SAÚDE 2012 PARA RESPONDER
+               AS DUVIDAS DAS GESTANTES).
+          </a>
+          <br><br>
+          Sugerir a confecção de móbiles, roupinhas , outros instrumentos que ajudem na
+          construção do afeto e do vinculo.
+          <br><br>
+
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado
+          amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a
+          saúde da gestante; como está estruturado o ambiente; como está o curso de vida da
+          gestante; como a família e rede social podem apoiar ou dificultar essas competências;
+          como acesso a serviços de saúde e educação podem apoiar ou dificultar essas
+          competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="9">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes
+          familiares, ginecológicos, obstétricos. (FICHA)
+          <br><br>
+          Retomar conhecimento sobre sinais de risco para a gravidez 
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (MANUAL DE PRÉ-NATAL DE BAIXO RISCO)
+          </a>
+          <br><br>
+          Discutir o desenvolvimento do feto e a importância da estimulação.
+          <br><br>
+          Discutir com a gestante : Como é que ela imagina seu bebê? Como é que o pai
+          imagina o bebê? 
+          <a button clear (click)="openPdf('portugal.pdf', 33)">
+               (MANUAL DE SAÚDE MENTAL DE PORTUGAL - ITENS 12, 13, 14).
+          </a>
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Execução do plano terapêutico. Perguntar sobre o uso da "DIARIO MÃE E BEBÊ" e
+          dar espaço para compartilhar seu conteúdo.
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as queixas
+          identificadas em relação a gestação
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO
+               PRÉ NATAL DE BAIXO RISCO/MINISTÉRIO DA SAÚDE, 2012 PARA RESPONDER
+               AS DUVIDAS DAS GESTANTES).
+          </a>
+          <br><br>
+          Utilizar dinâmica: pedir para gestante e acompanhante escrever no papel como
+          imagina ser as características do bebê. Depois compartilhar e elencar as
+          semelhanças. Valorizando todas características levantadas.
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado
+          amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a
+          saúde da gestante; como está estruturado o ambiente; como está o curso de vida da
+          gestante; como a família e rede social podem apoiar ou dificultar essas competências;
+          como acesso a serviços de saúde e educação podem apoiar ou dificultar essas
+          competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="10">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes
+          familiares, ginecológicos, obstétricos (FICHA).
+          <br><br>
+          Fortalecer competências maternas e vínculo conversando com a gestante sobre
+          valores pessoais e os valores que ela quer passar para o bebê (ENTENDENDO O
+          QUE É IMPORTANTE PARA MIM / REFLETINDO SOBRE SEUS VALORES) -
+          TÉCNICA DE ENTREVISTA MOTIVACIONAL).
+          <br><br>
+          Aplicar Escala de Edimburgo.
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Execução do plano terapêutico. Perguntar sobre o uso da "DIARIO MÃE E BEBÊ" e
+          dar espaço para compartilhar seu conteúdo.
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as queixas
+          identificadas em relação a gestação
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO
+               PRÉ NATAL DE BAIXO RISCO/MINISTÉRIO DA SAÚDE, 2012 PARA RESPONDER
+               AS DUVIDAS DAS GESTANTES).
+          </a>
+          <br><br>
+          Realizar atividade reflexiva sobre valores: será necessário impressos com as
+          perguntas reflexivas: ENTENDENDO O QUE É BOM PRA MIM.
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado
+          amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a
+          saúde da gestante; como está estruturado o ambiente; como está o curso de vida da
+          gestante; como a família e rede social podem apoiar ou dificultar essas competências;
+          como acesso a serviços de saúde e educação podem apoiar ou dificultar essas
+          competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="11">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes
+          familiares, ginecológicos, obstétricos (FICHA).
+          <br><br>
+          Discutir com a gestante: quais são as expectativas acerca do parto? 
+          <a button clear (click)="openPdf('portugal.pdf', 34)">
+               (UTILIZAR O
+               ROTEIRO DA PAGINA 27 DO MANUAL DE SAÚDE MENTAL DA GESTANTE /
+               PORTUGAL – ITEM 17 e 18).
+          </a>
+          <br><br>
+          Começar a discutir o Plano de parto:o local, o tempo que levará para se locomover até
+          o serviço de saúde e se deseja ter um acompanhante, procedimentos, escolha do
+          parto, trabalho de parto 
+          <a button clear target="_blank" href="https://play.google.com/store/apps/details?id=com.hp.pregnancy.lite&hl=pt"> 
+               (RETOMAR USO DO APLICATIVO "PREGNANCY" ITEM
+               PLANO DE PARTO).
+          </a>
+          <br><br>
+          Trabalhar para promover o envolvimento saudável do pai do bebê e/ou parceiro da
+          gestante no momento do parto e no cuidado da criança.
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Execução do plano terapêutico. Perguntar sobre o uso da "DIARIO MÃE E BEBÊ" e
+          dar espaço para compartilhar seu conteúdo.
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as queixas
+          identificadas em relação a gestação
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO
+               PRÉ NATAL DE BAIXO RISCO/MINISTÉRIO DA SAÚDE, 2012 PARA RESPONDER
+               AS DUVIDAS DAS GESTANTES).
+          </a>
+          <br><br>
+          Conversar sobre a na organização da “mala” da gestante e do bebê (UTILIZAR UM
+          JOGO ENVOLVENDO A GESTANTE E O ACOMPANHANTE)
+          <br><br>
+          Fortalecer as competências de cuidado do bebê através de vídeos sobre parto
+          (BABYCENTER).
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado
+          amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a
+          saúde da gestante; como está estruturado o ambiente; como está o curso de vida da
+          gestante; como a família e rede social podem apoiar ou dificultar essas competências;
+          como acesso a serviços de saúde e educação podem apoiar ou dificultar essas
+          competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="12">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes familiares, ginecológicos, obstétricos. Sinais de alerta para o parto (FICHA).
+          <br><br>
+          Conversar com a gestante: Como pensa alimentar o bebê? Qual a opinião do pai sobre a amamentação? E de outros membros da família? 
+          <a button clear (click)="openPdf('portugal.pdf', 35)">
+               (UTILIZAR O ROTEIRO DA PAGINA 27 DO MANUAL DE SAÚDE MENTAL DA GESTANTE / PORTUGAL – ITEM 20 e 21).
+          </a>
+          <br><br>
+          Orientar noções básicas de cuidados de recém-nascido e aleitamento materno 
+          <a button clear (click)="openPdf('saude-da-crianca.pdf', 132)">
+               (CADERNO ATENÇÃO BÁSICA - SAÚDE DA CRIANÇA - CAPÍTULO 9 "ALIMENTAÇÃO SAUDÁVEL - ACONSELHAMENTO PARA AMAMENTAÇÃO").
+          </a>
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as queixas identificadas em relação a gestação
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTÉRIO DA SAÚDE, 2012 PARA RESPONDER AS DUVIDAS DAS GESTANTES).
+          </a> 
+          Perguntar sobre o uso da "DIARIO MÃE E BEBÊ" e dar espaço para compartilhar seu conteúdo.
+          <br><br>
+          Fortalecer as competências familiares e maternas para receber e cuidar do bebê em casa (
+          <a button clear target="_blank" href="http://brasil.babycenter.com/mobile-apps">
+               UTILIZAR VÍDEOS DO BABYCENTER 
+          </a>
+          E BONECOS PARA QUE A GESTANTE POSSA REALIZAR OS CUIDADOS AO RECÉM-NASCIDO APRESENTADOS NA CONVERSA).
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a saúde da gestante; como está estruturado o ambiente; como está o curso de vida da gestante; como a família e rede social podem apoiar ou dificultar essas competências; como acesso a serviços de saúde e educação podem apoiar ou dificultar essas competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="13">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes familiares, ginecológicos, obstétricos. Sinais de alerta para o parto (FICHA).
+          <br><br>
+          Check -list final para o parto: contatos, bolsa da maternidade, transporte (RETOMAR PLANO DE PARTO CONVERSADO EM VISITA ANTERIOR E FAZER O CHECK-LIST JUNTO COM A GESTANTE)
+          <br><br>
+          Discutir com a gestante: preparo das mamas para aleitamento (RETOMAR CONVERSA SOBRE AMAMENTAÇÃO E PARA ORIENTAR 
+          <a button clear (click)="openPdf('pre-natal.pdf', 108)">
+               UTILIZAR O CADERNO ATENÇÃO BÁSICA - PRÉ-NATAL DE BAIXO RISCO - CAPÍTULO "5.9.8- PREPARO DAS MAMAS PARA AMAMENTAÇÃO").
+          </a>
+          <br><br>
+          Aplicar escala de Auto Eficácia.
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Execução do plano terapêutico. Perguntar sobre o uso da "DIARIO MÃE E BEBÊ" e dar espaço para compartilhar seu conteúdo.
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as queixas identificadas em relação a gestação
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTÉRIO DA SAÚDE, 2012 PARA RESPONDER AS DUVIDAS DAS GESTANTES).
+          </a>
+          <br><br>
+          Fortalecer conhecimento da gestante sobre sinais de trabalho de parto 
+          <a button clear target="_blank" href="https://www.youtube.com/watch?v=2iSMIAprTPY"> 
+             (UTILIZAR IMAGENS E VÍDEO: "07 SINAIS E TIPOS DE PARTOS" DO HOSPITAL SANTA JOANA)
+          </a>
+          <br><br>
+          Fortalecimento das competências de cuidado com a amamentação 
+          <a button clear target="_blank" href="https://www.youtube.com/watch?v=i31VEa--XpE"> 
+               (UTILIZAR VÍDEOS SOBRE AMAMENTAÇÃO "AMAMENTAÇÃO MUITO MAIS QUE ALIMENTAR A CRIANÇA" DO CANAL CENTRO MUNICIPAL DE SAÚDE WALDYR FRANCO - YOU TUBE)
+          </a>
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a saúde da gestante; como está estruturado o ambiente; como está o curso de vida da gestante; como a família e rede social podem apoiar ou dificultar essas competências; como acesso a serviços de saúde e educação podem apoiar ou dificultar essas competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="14">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes familiares, ginecológicos, obstétricos. Sinais de alerta (FICHA).
+          <br><br>
+          Discutir com a gestante: que o nascimento de uma criança pode levar a pressões financeiras na casa, isso a preocupa? E quanto a organização da casa? 
+          <a button clear (click)="openPdf('portugal.pdf', 36)">
+               (UTILIZAR O ROTEIRO DA PAGINA 27 DO MANUAL DE SAÚDE MENTAL DA GESTANTE / PORTUGAL – ITEM 22 e 23)
+          </a>
+          <br><br>
+          Check-list final para o parto: contatos, bolsa da maternidade, transporte, etc. (RETOMAR PLANO DE PARTO CONVERSADO EM VISITA ANTERIOR E FAZER O CHECK-LIST JUNTO COM A GESTANTE)
+          <br><br>
+          Aplicar Escala de Apego Fetal.
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Execução do plano terapêutico. Perguntar sobre o uso da "DIARIO MÃE E BEBÊ" e dar espaço para compartilhar seu conteúdo.
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as queixas identificadas em relação a gestação
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTÉRIO DA SAÚDE, 2012 PARA RESPONDER AS DUVIDAS DAS GESTANTES).
+          </a>
+          <br><br>
+          Fortalecer conhecimento da gestante sobre sinais de trabalho de parto e as posições do bebê no parto
+          <a button clear target="_blank" href="http://brasil.babycenter.com/v25010947/posição-do-bebê-na-hora-do-parto-v%C3%ADdeo"> 
+               (UTILIZAR IMAGENS E O VÍDEO:"POSIÇÃO DO BEBÊ NA HORA DO PARTO: VÍDEO" DO BABYCENTER)
+          </a>
+          <br><br>
+          Avaliar se as intervenções aumentaram competência materna durante a gestação (UTILIZAR QUESTIONÁRIO DE LINHA DE BASE DO PROJETO JANELAS)
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a saúde da gestante; como está estruturado o ambiente; como está o curso de vida da gestante; como a família e rede social podem apoiar ou dificultar essas competências;
+          como acesso a serviços de saúde e educação podem apoiar ou dificultar essas competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="15">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes familiares, ginecológicos, obstétricos. Sinais de alerta (FICHA).
+          <br><br>
+          Discutir com a gestante: Há mais algum assunto que gostaria de falar? 
+          <a button clear (click)="openPdf('portugal.pdf', 36)">
+               (UTILIZAR O ROTEIRO DA PAGINA 27 DO MANUAL DE SAÚDE MENTAL DA GESTANTE / PORTUGAL – ITEM 25)
+          </a>
+          <br><br>
+          Check-list final para o parto: contatos, bolsa da maternidade, transporte, etc. (RETOMAR PLANO DE PARTO CONVERSADO EM VISITA ANTERIOR E FAZER O CHECK-LIST JUNTO COM A GESTANTE)
+          <br><br>
+          Conversar com a gestante sobre a chegada do bebê e cuidados com higiene (UTILIZAR ORIENTAÇÕES DO PROJETO JANELAS E DO 
+          <a button clear (click)="openPdf('saude-da-crianca.pdf', 1)">
+               CADERNO DE ATENÇÃO BÁSICA SAÚDE DA CRIANÇA)
+          </a>
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Execução do plano terapêutico. Perguntar sobre o uso da "DIARIO MÃE E BEBÊ" e dar espaço para compartilhar seu conteúdo.
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as queixas identificadas em relação a gestação 
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTÉRIO DA SAÚDE, 2012 PARA RESPONDER AS DUVIDAS DAS GESTANTES).
+          </a>
+          <br><br>
+          Fortalecer conhecimentos da gestante sobre trabalho de parto e a chegada do bebê 
+          <a button clear target="_blank" href="https://www.youtube.com/watch?v=aEcun1y6of8"> 
+               (UTILIZAR IMAGENS E O VÍDEO: ”Estou em trabalho de parto, e agora?”)
+          </a>
+          <br><br>
+          Fortalecer conhecimentos da gestante sobre higiene (UTILIZAR BONECO, IMAGENS E VÍDEOS).
+          <br><br>
+          Avaliação da gestante sobre o acompanhamento das visitadoras durante a gestação.
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a saúde da gestante; como está estruturado o ambiente; como está o curso de vida da gestante; como a família e rede social podem apoiar ou dificultar essas competências; como acesso a serviços de saúde e educação podem apoiar ou dificultar essas competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="16">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes familiares, ginecológicos, obstétricos. Sinais de alerta (FICHA).
+          <br><br>
+          Discutir com a gestante: Quais são suas expectativas para o período pós-parto imediato?
+          <br><br>
+          Check-list final para o parto: contatos, bolsa da maternidade, transporte, etc. (RETOMAR PLANO DE PARTO CONVERSADO EM VISITA ANTERIOR E FAZER O CHECK-LIST JUNTO COM A GESTANTE)
+          <br><br>
+          Conversar com a gestante sobre a chegada do bebê e cuidados com saúde (UTILIZAR ORIENTAÇÕES DO PROJETO JANELAS E DO 
+          <a button clear (click)="openPdf('saude-da-crianca.pdf', 1)">
+               CADERNO DE ATENÇÃO BÁSICA SAÚDE DA CRIANÇA)
+          </a>
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Execução do plano terapêutico. Perguntar sobre o uso da "DIARIO MÃE E BEBÊ" e dar espaço para compartilhar seu conteúdo.
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as queixas identificadas em relação a gestação 
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTÉRIO DA SAÚDE, 2012 PARA RESPONDER AS DUVIDAS DAS GESTANTES).
+          </a>
+          <br><br>
+          Fortalecer conhecimentos da gestante sobre a saúde do bebê (UTILIZAR BONECO, IMAGENS E VÍDEOS).
+          <br><br>
+          Avaliação o conhecimento da gestante sobre cuidados com higiene do bebê utilizando o boneco após a demonstração da visitadora.
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a saúde da gestante; como está estruturado o ambiente; como está o curso de vida da gestante; como a família e rede social podem apoiar ou dificultar essas competências; como acesso a serviços de saúde e educação podem apoiar ou dificultar essas competências.
+        </ion-item>
+
+        <ion-item *ngSwitchCase="17">
+          Andamento do pré-natal, cartão da gestante. Identificação, queixas, antecedentes familiares, ginecológicos, obstétricos. Sinais de alerta (FICHA).
+          <br><br>
+          Discutir com a gestante: Algumas mães ficam deprimidas depois do nascimento do bebê. Esta preocupada com esta possibilidade? 
+          <a button clear (click)="openPdf('portugal.pdf', 32)">
+               (UTILIZAR O ROTEIRO DA PAGINA 27 DO MANUAL DE SAÚDE MENTAL DA GESTANTE / PORTUGAL – ITEM 9)
+          </a>
+          <br><br>
+          Conversar com a gestante sobre a chegada do bebê e cuidados com aspectos de amor e segurança (UTILIZAR ORIENTAÇÕES DO PROJETO JANELAS E DO 
+          <a button clear (click)="openPdf('saude-da-crianca.pdf', 1)">
+               CADERNO DE ATENÇÃO BÁSICA SAÚDE DA CRIANÇA)
+          </a>
+          <br><br>
+          <b>Intervenção:</b>
+          <br><br>
+          Execução do plano terapêutico. Perguntar sobre o uso da "DIARIO MÃE E BEBÊ" e dar espaço para compartilhar seu conteúdo.
+          <br><br>
+          Responder as duvidas da gestante sobre o pré-natal. Responder as queixas identificadas em relação a gestação 
+          <a button clear (click)="openPdf('pre-natal.pdf', 1)">
+               (CONSULTAR O CADERNO DE ATENÇÃO AO PRÉ NATAL DE BAIXO RISCO/MINISTÉRIO DA SAÚDE, 2012 PARA RESPONDER AS DUVIDAS DAS GESTANTES).
+          </a>
+          <br><br>
+          Fortalecer conhecimentos da gestante sobre amor e segurança do bebê (UTILIZAR BONECO, IMAGENS E VÍDEOS).
+          <br><br>
+          OBS: Lembrar que o foco das VD são a construção de competências para o cuidado amoroso e sensível a criança, e que para tanto precisamos saber como está cuidado a saúde da gestante; como está estruturado o ambiente; como está o curso de vida da gestante; como a família e rede social podem apoiar ou dificultar essas competências; como acesso a serviços de saúde e educação podem apoiar ou dificultar essas competências.
+        </ion-item>
+
+      </ion-item>
+
+  </ion-list>
+</ion-card>

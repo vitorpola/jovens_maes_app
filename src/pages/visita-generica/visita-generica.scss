@@ -1,0 +1,29 @@
+.visita-generica {
+
+	ion-card-header {
+	  font-weight: bold;
+	  font-size: 14pt;
+	  color: map-get($colors,pink-dark );
+	}
+
+	ion-list-header {
+	  color: map-get($colors, primary );
+	  font-weight: normal;
+	}
+
+	ion-card {
+		border-width: 1px;
+		border-style: solid;
+	}
+
+	.subheader-list {
+	  color: map-get($colors,pink-dark );
+	  font-weight: normal;
+	}
+
+	ion-textarea {
+		border-style: solid;
+		border-width: 1px;
+	}
+
+}

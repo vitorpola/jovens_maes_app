@@ -1,0 +1,533 @@
+<ion-card>
+  <ion-card-header> Exame físico </ion-card-header>
+  <ion-list>
+
+  <ion-item>
+    <ion-label dark stacked>Peso</ion-label>
+    <ion-input placeholder="Ex: 50Kg"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label dark stacked>Altura</ion-label>
+    <ion-input placeholder="Ex: 1,59m"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label dark stacked>IMC</ion-label>
+    <ion-input placeholder="Ex: arrumar"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label dark stacked>PA</ion-label>
+    <ion-input placeholder="Ex: arrumar mmHg"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label dark stacked>Pulso</ion-label>
+    <ion-input placeholder="Ex: 70 bpm"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label dark stacked>FR</ion-label>
+    <ion-input placeholder="Ex: mpm"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label dark stacked>Temperatura</ion-label>
+    <ion-input placeholder="Ex: 36,5 graus"></ion-input>
+  </ion-item>
+
+  </ion-list>
+
+  <ion-card>
+    <ion-card-header>Cabeça</ion-card-header>
+
+    <ion-list>
+
+      <ion-item class="subheader-list"> Couro cabeludo </ion-item>
+
+      <ion-item>
+        <ion-label>Limpo</ion-label>
+        <ion-checkbox [(ngModel)]="limpo"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Com sujidade</ion-label>
+        <ion-checkbox [(ngModel)]="sujo"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Íntegro</ion-label>
+        <ion-checkbox [(ngModel)]="integro"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Com lesão</ion-label>
+        <ion-checkbox [(ngModel)]="lesao"></ion-checkbox>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-label>Alopecia</ion-label>
+        <ion-checkbox [(ngModel)]="alopecia"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Seborreia</ion-label>
+        <ion-checkbox [(ngModel)]="seborreia"></ion-checkbox>
+      </ion-item>
+
+      </ion-list>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>Olhos</ion-card-header>
+      <ion-list>
+        <ion-item class="subheader-list"> Acuidade visual </ion-item>
+
+        <ion-item>
+          <ion-label>Uso de lentes corretivas</ion-label>
+          <ion-checkbox [(ngModel)]="lentescorretivas"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Sem alterações</ion-label>
+          <ion-checkbox [(ngModel)]="semalteracoes"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Presença de secreção</ion-label>
+          <ion-checkbox [(ngModel)]="secrecao"></ion-checkbox>
+        </ion-item>
+
+        <ion-item *ngIf="secrecao">
+          <ion-label dark stacked>Aspecto:</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item class="subheader-list"> Pupilas </ion-item>
+
+        <ion-item>
+          <ion-label>Simétricas</ion-label>
+          <ion-checkbox [(ngModel)]="simetricas"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Assimétricas</ion-label>
+          <ion-checkbox [(ngModel)]="assimetricas"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+     </ion-card>
+
+
+     <ion-card>
+        <ion-card-header> Nariz </ion-card-header>
+        <ion-list>
+          <ion-item>
+            <ion-label>Presença de secreção</ion-label>
+            <ion-checkbox [(ngModel)]="secrecaonariz"></ion-checkbox>
+          </ion-item>
+
+          <ion-item *ngIf="secrecaonariz">
+            <ion-label dark stacked>Aspecto:</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Congestão</ion-label>
+            <ion-checkbox [(ngModel)]= "congestao"></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Epistaxe</ion-label>
+            <ion-checkbox [(ngModel)]= "epistaxe"></ion-checkbox>
+          </ion-item>
+
+        </ion-list>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>Boca</ion-card-header>
+
+
+      <ion-list>
+        <ion-item class="subheader-list"> Mucosa </ion-item>
+
+        <ion-item>
+          <ion-label>Corada</ion-label>
+          <ion-checkbox [(ngModel)]= "mucosacorada"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Descorada</ion-label>
+          <ion-checkbox [(ngModel)]= "mucosadescorada"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Íntegra</ion-label>
+          <ion-checkbox [(ngModel)]= "mucosaintegra"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Com lesão</ion-label>
+          <ion-checkbox [(ngModel)]= "mucosacomlesao"></ion-checkbox>
+        </ion-item>
+
+        <ion-item class="subheader-list"> Dentes </ion-item>
+
+        <ion-item>
+          <ion-label>Dentição completa</ion-label>
+          <ion-checkbox [(ngModel)]= "denticaocompleta"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Dentição incompleta</ion-label>
+          <ion-checkbox [(ngModel)]= "denticaoincompleta"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Prótese S/I</ion-label>
+          <ion-checkbox [(ngModel)]= "denticaoprotese"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Pescoço</ion-card-header>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Pele íntegra</ion-label>
+        <ion-checkbox [(ngModel)]= "peleintegra"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Com lesão</ion-label>
+        <ion-checkbox [(ngModel)]= "pelecomlesao"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nódulos</ion-label>
+        <ion-checkbox [(ngModel)]="pelenodulos"></ion-checkbox>
+      </ion-item>
+
+      <ion-item *ngIf="pelenodulos">
+        <ion-label dark stacked>Aspecto:</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Êxtase jugular</ion-label>
+        <ion-checkbox [(ngModel)]="extasejugular"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Tórax</ion-card-header>
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Tórax simétrico</ion-label>
+        <ion-checkbox [(ngModel)]= "toraxsimetrico"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tórax assimétrico</ion-label>
+        <ion-checkbox [(ngModel)]= "toraxassimetrico"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tórax íntegro</ion-label>
+        <ion-checkbox [(ngModel)]= "toraxintegro"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Tórax com lesão</ion-label>
+        <ion-checkbox [(ngModel)]= "toraxcomlesao"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Mamas</ion-card-header>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Mamas simétricas</ion-label>
+        <ion-checkbox [(ngModel)]= "mamassimetricas"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Mamas assimétricas</ion-label>
+        <ion-checkbox [(ngModel)]= "mamasassimetricas"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Presença de colostro</ion-label>
+        <ion-checkbox [(ngModel)]= "colostro"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Turgidas</ion-label>
+        <ion-checkbox [(ngModel)]= "turgidas"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sinais de inflamação</ion-label>
+        <ion-checkbox [(ngModel)]= "inflamacao"></ion-checkbox>
+      </ion-item>
+
+      <ion-item class="subheader-list"> Condição mamilar </ion-item>
+
+      <ion-item>
+        <ion-label>Protuso</ion-label>
+        <ion-checkbox [(ngModel)]= "protuso"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Plano</ion-label>
+        <ion-checkbox [(ngModel)]= "plano"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Invertido</ion-label>
+        <ion-checkbox [(ngModel)]= "invertido"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Amamentação anterior</ion-label>
+        <ion-checkbox [(ngModel)]= "amamentacaoanterior"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Abdome</ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-label>Plano</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomeplano"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Globoso</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomegloboso"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Protuso</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomeprotuso"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Flácido</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomeflacido"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Distendido</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomedistendido"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>RHA+</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomerhamais"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>RHA-</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomerhamenos"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Timpânico</ion-label>
+        <ion-checkbox [(ngModel)]= "abdometimpanico"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Maciço</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomemacico"></ion-checkbox>
+      </ion-item>
+      <ion-item class="subheader-list"> Palpação </ion-item>
+      <ion-item>
+        <ion-label dark stacked>Altura uterina</ion-label>
+        <ion-input placeholder="Ex: 5 cm"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Alterações</ion-label>
+        <ion-checkbox [(ngModel)]= "abdomemalteracoes"></ion-checkbox>
+      </ion-item>
+      <ion-item *ngIf="abdomemalteracoes">
+        <ion-label >Quais alterações</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item class="subheader-list"> Sobre o feto </ion-item>
+
+      <ion-item>
+        <ion-label>Movimentação Fetal</ion-label>
+        <ion-checkbox [(ngModel)]= "movimentacaofetal"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Batimentos cardiofetais audiveis</ion-label>
+        <ion-checkbox [(ngModel)]= "batimentoscardiofetais"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Sistema geniturinário</ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-label>Alterações urinárias</ion-label>
+        <ion-checkbox [(ngModel)]= "alteracoesurinarias"></ion-checkbox>
+      </ion-item>
+      <ion-item *ngIf="alteracoesurinarias">
+        <ion-label >Especifique</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Secreção vaginal</ion-label>
+        <ion-checkbox [(ngModel)]= "secrecaovaginal"></ion-checkbox>
+      </ion-item>
+      <ion-item *ngIf="secrecaovaginal">
+        <ion-label >Aspecto</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sangramento</ion-label>
+        <ion-checkbox [(ngModel)]= "sangramento"></ion-checkbox>
+      </ion-item>
+      <ion-item *ngIf="sangramento">
+        <ion-label >Aspecto e características</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+      <ion-card-header>Membros superiores</ion-card-header>
+      <ion-list>
+
+        <ion-item>
+          <ion-label>Pele íntegra</ion-label>
+          <ion-checkbox [(ngModel)]= "membrossuperioreintegros"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Lesão</ion-label>
+          <ion-checkbox [(ngModel)]= "membrossuperiorelesao"></ion-checkbox>
+        </ion-item>
+
+        <ion-item *ngIf="membrossuperioreslesao">
+          <ion-label >Tipo</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Perfusão mantida</ion-label>
+          <ion-checkbox [(ngModel)]= "msuperioresperfusao"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Cianose</ion-label>
+          <ion-checkbox [(ngModel)]= "msuperiorescianose"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Edema</ion-label>
+          <ion-checkbox [(ngModel)]= "msuperioresedema"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Hematomas</ion-label>
+          <ion-checkbox [(ngModel)]= "msuperioreshematomas"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Manchas</ion-label>
+          <ion-checkbox [(ngModel)]= "msuperioresmanchas"></ion-checkbox>
+        </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Membros inferiores</ion-card-header>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Pele íntegra</ion-label>
+        <ion-checkbox [(ngModel)]= "membrosinferioreintegros"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Lesão</ion-label>
+        <ion-checkbox [(ngModel)]= "membrosinferiorelesao"></ion-checkbox>
+      </ion-item>
+
+      <ion-item *ngIf="membrosinferioreslesao">
+        <ion-label >Tipo</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Perfusão mantida</ion-label>
+        <ion-checkbox [(ngModel)]= "minferioresperfusao"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cianose</ion-label>
+        <ion-checkbox [(ngModel)]= "minferiorescianose"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Edema</ion-label>
+        <ion-checkbox [(ngModel)]= "minferioresedema"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Hematomas</ion-label>
+        <ion-checkbox [(ngModel)]= "minferioreshematomas"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Manchas</ion-label>
+        <ion-checkbox [(ngModel)]= "minferioresmanchas"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Sobre a visita</ion-card-header>
+    <ion-list>
+      <ion-item class="subheader-list"> Observações </ion-item>
+
+      <ion-item>
+        <ion-textarea rows="7"></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Alguém ficou junto com a mãe na visita</ion-label>
+        <ion-checkbox [(ngModel)]= "acompanhante"></ion-checkbox>
+      </ion-item>
+
+      <ion-item *ngIf="acompanhante">
+        <ion-label>Quem?</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Horário Final:</ion-label>
+        <ion-datetime displayFormat="HH:mm"></ion-datetime>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-card>
+
+  <ion-item>
+      <ion-label>Aceito participar do programa Jovens Mães Cuidadoras</ion-label>
+      <ion-checkbox [(ngModel)]= "aceito"></ion-checkbox>
+  </ion-item>
+</ion-card>
+

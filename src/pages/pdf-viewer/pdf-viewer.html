@@ -1,0 +1,52 @@
+<!--
+  Generated template for the PdfViewer page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle="menu">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>
+            Biblioteca
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+	<pdf-viewer [src]="pdfSrc" 
+                [(page)]="page" 
+                [original-size]="false"
+                [show-all]="false"
+                [zoom]="1.0"
+                [after-load-complete]="afterLoadComplete"
+    ></pdf-viewer>
+
+
+    <ion-grid>
+    	<ion-row>
+    		<ion-col>	
+			    <button ion-button (click)="previousPage()">
+			    	<ion-icon name="arrow-round-back"></ion-icon>
+			    </button>
+    		</ion-col>
+    		<ion-col class="align-right">
+    			<ion-input [(ngModel)]="page" pattern="-?[0-9]*(\.[0-9]+)?"></ion-input>
+    		</ion-col>
+    		<ion-col>
+    			<ion-item no-lines class="numPages" *ngIf="pdf">/ {{ numPages }}</ion-item>
+    		</ion-col>
+    		<ion-col>
+    			<button class="align-right" ion-button (click)="nextPage()">
+    				<ion-icon name="arrow-round-forward"></ion-icon>
+    			</button>
+    		</ion-col>
+    	</ion-row>
+    </ion-grid>
+
+
+</ion-content>

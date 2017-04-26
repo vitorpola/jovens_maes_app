@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar color="pink-dark">
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-searchbar
+	  (ionInput)="getMothers($event)">
+	</ion-searchbar>
+
+	 <button ion-item text-wrap *ngFor="let m of mothers" (click)="onClick(m)">
+    {{m.name}} 
+   </button>
+</ion-content>

@@ -1,0 +1,46 @@
+page-rating {
+	ion-grid {
+		text-align: center;
+	}
+
+	ion-icon {
+		font-size: 300%;
+
+	}
+
+	ion-header {
+	  font-weight: bold;
+	  font-size: 20pt;
+	  color: map-get($colors,pink-dark );
+	  text-align: center;
+	}
+
+	ion-label{
+	  font-weight: bold;
+	  font-size: 20pt;
+	  color: map-get($colors,pink-dark );
+	  text-align: center;
+	}
+
+	#botao {
+		padding-top: 100px;
+	}
+
+	#emoticons {
+		padding-top: 50px;
+	   width: 50%;
+	   max-width: 180px;
+	}
+
+	#bom {
+		color: green;
+	}
+
+	#medio {
+		color: #ffbf00;
+	}
+
+	#ruim {
+		color: red;
+	}
+}

@@ -1,0 +1,29 @@
+<ion-card>
+  <ion-card-header> Queixas </ion-card-header>
+  <ion-list>
+      <ion-item>
+        <ion-label dark stacked>Sinais e sintomas apresentados desde a última visita:</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Intercorrências desde a última visita:</ion-label>
+        <ion-input type="date"></ion-input>
+      </ion-item>
+
+      <ion-item class="subheader-list"> Consulta de pré-natal </ion-item>
+
+	      <ion-item *ngIf="!faltou">
+	      <ion-checkbox [(ngModel)]="prenatal"></ion-checkbox>
+	      <ion-label>Foi</ion-label>
+	      </ion-item>
+
+	    <ion-item *ngIf="!prenatal">
+	      <ion-checkbox [(ngModel)]="faltou"></ion-checkbox>
+	      <ion-label>Faltou</ion-label>
+	    </ion-item>
+
+	    <ion-input placeholder="Motivo" *ngIf="faltou && !prenatal"></ion-input>
+	
+  </ion-list>
+</ion-card>

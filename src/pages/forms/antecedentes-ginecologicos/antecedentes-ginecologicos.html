@@ -1,0 +1,81 @@
+<ion-card>
+  <ion-card-header> Antecedentes Ginecológicos </ion-card-header>
+  <ion-list>
+    <ion-item class="subheader-list">Ciclo Menstrual</ion-item>
+
+    <ion-item>
+      <ion-label dark stacked>Duração</ion-label>
+      <ion-input placeholder="em dias"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark stacked>Intervalo</ion-label>
+      <ion-input placeholder="em dias"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark stacked>Menarca</ion-label>
+      <ion-input placeholder="idade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark>Regular</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="subheader-list">Anticoncepcionais</ion-item>
+    <ion-item>
+      <ion-label dark stacked>Qual?</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark stacked>Tempo</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item class="subheader-list">Outros</ion-item>
+
+    <ion-item>
+      <ion-label dark>Cirurgias Ginecológicas</ion-label>
+      <ion-checkbox [(ngModel)]="cirurgias"></ion-checkbox>
+    </ion-item>
+    <ion-item *ngIf="cirurgias">
+      <ion-label dark stacked>Idade</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item *ngIf="cirurgias">
+      <ion-label dark stacked>Motivo</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark>Malformações Uterinas</ion-label>
+      <ion-checkbox [(ngModel)]="uterina"></ion-checkbox>
+    </ion-item>
+    <ion-item *ngIf="uterina">
+      <ion-label dark stacked>Qual?</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark>Patologias mamárias</ion-label>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label dark stacked>Tratamentos</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item class="subheader-list">Última colpocitologia oncótica</ion-item>
+    <ion-item>
+      <ion-label dark stacked>Data</ion-label>
+      <ion-input type="date"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label dark stacked>Resultados</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+      
+  </ion-list>
+</ion-card>

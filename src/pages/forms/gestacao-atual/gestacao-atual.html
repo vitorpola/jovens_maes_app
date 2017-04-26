@@ -1,0 +1,131 @@
+<ion-card>
+  <ion-card-header> Gestação atual </ion-card-header>
+  <ion-list>
+
+    <ion-item>
+      <ion-label dark stacked>DUM</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="Date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark stacked>Peso prévio</ion-label>
+      <ion-input placeholder="Ex: 50Kg"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark stacked>Altura</ion-label>
+      <ion-input placeholder="Ex: 1,59m"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark stacked>DPP</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="DPPDate"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark stacked>IG</ion-label>
+      <ion-input placeholder="7 semanas"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark>Natimortos</ion-label>
+      <ion-checkbox [(ngModel)]="natimortos"></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="subheader-list"> Aceitação da gestação </ion-item>
+
+    <ion-item>
+      <ion-label dark >Gestante</ion-label>
+      <ion-checkbox [(ngModel)]="gestante"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Parceiros</ion-label>
+      <ion-checkbox [(ngModel)]="parceiros"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Família</ion-label>
+      <ion-checkbox [(ngModel)]="familia"></ion-checkbox>
+    </ion-item>
+
+    <ion-item class="subheader-list"> Sinais e sintomas da gestação </ion-item>
+
+    <ion-item>
+      <ion-textarea rows="3"></ion-textarea>
+    </ion-item>
+
+    <ion-item class="subheader-list"> Hábitos alimentares </ion-item>
+
+    <ion-item>
+      <ion-textarea rows="3"></ion-textarea>
+    </ion-item>
+
+    <ion-item class="subheader-list"> Medicações em uso </ion-item>
+
+    <ion-item>
+      <ion-textarea rows="2"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Internação durante a gestante atual</ion-label>
+      <ion-checkbox [(ngModel)]="internacaogestacao"></ion-checkbox>
+    </ion-item>
+
+    <ion-item *ngIf="internacaogestacao">
+      <ion-label dark stacked>Motivo</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Fumo</ion-label>
+      <ion-checkbox [(ngModel)]="fumo"></ion-checkbox>
+    </ion-item>
+    <ion-item *ngIf="fumo">
+      <ion-label dark stacked>Numero de cigarros por dia</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Álcool</ion-label>
+      <ion-checkbox [(ngModel)]="alcool"></ion-checkbox>
+    </ion-item>
+    <ion-item *ngIf="alcool">
+      <ion-label dark stacked>Numero de doses por dia</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Esforço físico intenso</ion-label>
+      <ion-checkbox [(ngModel)]="esforcofisico"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Drogas ilícitas</ion-label>
+      <ion-checkbox [(ngModel)]="drogas"></ion-checkbox>
+    </ion-item>
+
+    <ion-item *ngIf="drogas">
+      <ion-label dark stacked>Qual</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item *ngIf="drogas">
+      <ion-label dark stacked>Quantidade</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Exposição a agentes químicos e físicos nocivos</ion-label>
+      <ion-checkbox [(ngModel)]="agentesquimicos"></ion-checkbox>
+    </ion-item>
+
+    <ion-item *ngIf="agentesquimicos">
+      <ion-label dark stacked>Quais</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label dark stacked>Fatores estressores</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-card>

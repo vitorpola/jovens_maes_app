@@ -1,0 +1,91 @@
+<!--
+  Generated template for the AntecedentesFamiliares page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-card>
+  <ion-card-header> Antecedentes Familiares </ion-card-header>
+  <ion-list>
+    <ion-item>
+      <ion-checkbox [(ngModel)]="hipertensao"></ion-checkbox>
+      <ion-label>Hipertensão Arterial</ion-label>
+    </ion-item>
+
+    <ion-item *ngIf="hipertensao">
+      <ion-label dark stacked>Grau de parentesco</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="diabetes"></ion-checkbox>
+      <ion-label>Diabetes</ion-label>
+    </ion-item>
+
+    <ion-item *ngIf="diabetes">
+      <ion-label dark stacked>Grau de parentesco</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="malformacoes"></ion-checkbox>
+      <ion-label>Malformações congênitas e anomalias genéticas</ion-label>
+    </ion-item>
+
+    <ion-item *ngIf="malformacoes">
+      <ion-label dark stacked>Grau de parentesco</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="gemelaridade"></ion-checkbox>
+      <ion-label>Gemelaridade</ion-label>
+    </ion-item>
+
+    <ion-item *ngIf="gemelaridade">
+      <ion-label dark stacked>Grau de parentesco</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="cancermama"></ion-checkbox>
+      <ion-label>Câncer de Mama e/ou Colo Uterino</ion-label>
+    </ion-item>
+
+    <ion-item *ngIf="cancermama">
+      <ion-label dark stacked>Grau de parentesco</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="hanseniase"></ion-checkbox>
+      <ion-label>Hanseníase</ion-label>
+    </ion-item>
+
+    <ion-item *ngIf="hanseniase">
+      <ion-label dark stacked>Grau de parentesco</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="tuberculose"></ion-checkbox>
+      <ion-label>Tuberculose</ion-label>
+    </ion-item>
+
+    <ion-item *ngIf="tuberculose">
+      <ion-label dark stacked>Grau de parentesco</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="chagas"></ion-checkbox>
+      <ion-label>Doença de Chagas</ion-label>
+    </ion-item>
+
+    <ion-item *ngIf="chagas">
+      <ion-label dark stacked>Grau de parentesco</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+  </ion-list>
+</ion-card>

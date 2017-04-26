@@ -1,0 +1,19 @@
+<ion-card>
+	<ion-card-header>Visita Anterior</ion-card-header>
+
+	<ion-item class="subheader-list">Impressões pessoais da visitadora</ion-item>
+    <ion-item text-wrap *ngFor="let ia of impressoesAnteriores_newline"> {{ia}} </ion-item>
+	<ion-item class="subheader-list">Plano para a próxima visita</ion-item>
+    <ion-item text-wrap *ngFor="let pa of planoAnterior_newline"> {{pa}} </ion-item>
+</ion-card>
+
+<ion-card>
+  <ion-item>
+	<ion-label>Data</ion-label>
+  	<ion-datetime displayFormat="DD/MM/YYYY" pickerFormat = "DDDD MMMM YYYY"[(ngModel)]="myDate"></ion-datetime>
+  </ion-item>
+  <ion-item>
+	<ion-label dark>Horário de início</ion-label>
+  	<ion-datetime displayFormat="HH:mm" pickerFormat = "HH mm"[(ngModel)]="time"></ion-datetime>
+  </ion-item>
+</ion-card>

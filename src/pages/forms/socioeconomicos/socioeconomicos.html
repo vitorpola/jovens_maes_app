@@ -1,0 +1,85 @@
+<!--
+  Generated template for the Socioeconomicos page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-card>
+  <ion-card-header> Dados Socioeconômicos </ion-card-header>
+  <ion-list>
+      <ion-item>
+        <ion-label dark stacked>Escolaridade</ion-label>
+        <ion-select>
+          <ion-option value="n">Nenhuma</ion-option>
+          <ion-option value="ef">Ensino Fundamental</ion-option>
+          <ion-option value="em">Ensino Médio</ion-option>
+          <ion-option value="es">Ensino Superior</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Profissão</ion-label>
+        <ion-input placeholder="Profissão"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Estado Civil</ion-label>
+        <ion-select>
+          <ion-option value="solteira">Solteira</ion-option>
+          <ion-option value="casada">Casada</ion-option>
+          <ion-option value="viuva">Viúva</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Renda</ion-label>
+        <ion-input type="number" min="0"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Renda Familiar</ion-label>
+        <ion-input type="number" min="0" placeholder="R$800,00"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Número de dependentes</ion-label>
+        <ion-input min="0" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Moradia</ion-label>
+        <ion-select>
+          <ion-option value="alvenaria">Alvenaria</ion-option>
+          <ion-option value="madeira">Madeira</ion-option>
+          <ion-option value="metal">Metal</ion-option>
+          <ion-option value="outro">Outro</ion-option> <!--Adicionar um input para outro-->
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Número de cômodos</ion-label>
+        <ion-input min="0" type="number"></ion-input>
+      </ion-item>
+
+      <ion-label dark stacked class="list-long-item">Saneamento</ion-label>
+      <ion-item>
+        <ion-label>Água</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Esgoto</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Coleta de lixo</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label dark stacked>Distância até unidade de saúde</ion-label>
+        <ion-input min="0" type="number"></ion-input>
+      </ion-item>
+  </ion-list>
+</ion-card>

@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar color="pink-dark">
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="library">
+
+  <ion-segment [(ngModel)]="view">
+    <ion-segment-button value="docs">
+      <ion-icon name="md-copy"></ion-icon>
+      <br>
+      <span>Apostilas</span>
+    </ion-segment-button>
+    <ion-segment-button value="videos">
+      <ion-icon name="videocam"></ion-icon>
+      <br>
+      <span>Vídeos</span>
+    </ion-segment-button>
+    <ion-segment-button value="apps">
+      <ion-icon name="apps"></ion-icon>
+      <br>
+      <span>Aplicativos</span>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-list [hidden]="view != 'docs'">
+    <button ion-item text-wrap *ngFor="let apost of apostilas" (click)="openPdf(apost.caminho, 1)" icon-left>
+      <ion-icon name="document"></ion-icon>
+      {{apost.titulo}}
+    </button>
+  </ion-list>
+
+  <ion-grid [hidden]="view != 'videos'">
+    <ion-row>
+      <ion-col col-4 *ngFor="let vid of videos">
+        <a target="_blank" href={{vid.caminho}} class="thumb-video">
+          <img [src]=" 'assets/img/' + vid.thumb" alt="thumb">
+          <ion-icon name="play"></ion-icon>
+          <p>{{vid.titulo}}</p>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid [hidden]="view != 'apps'">
+    <ion-row>
+      <ion-col col-3 *ngFor="let app of aplicativos">
+        <a target="_blank" href={{app.caminho}} class="thumb-app">
+          <img [src]=" 'assets/img/' + app.thumb" alt="thumb">
+          <p>{{app.titulo}}</p>
+        </a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

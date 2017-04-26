@@ -1,0 +1,70 @@
+<!--
+  Generated template for the HabitosRotinas page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-card>
+	<ion-card-header>Hábitos e Rotinas</ion-card-header>
+	
+	<ion-item>
+		<ion-label dark stacked>Hábitos alimentares</ion-label>
+	    <ion-input></ion-input>
+	</ion-item>
+
+    <ion-item>
+      <ion-label dark stacked>Medicações em uso</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Fumo</ion-label>
+      <ion-checkbox [(ngModel)]="fumo"></ion-checkbox>
+    </ion-item>
+    <ion-item *ngIf="fumo">
+      <ion-label dark stacked>Numero de cigarros por dia</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Álcool</ion-label>
+      <ion-checkbox [(ngModel)]="alcool"></ion-checkbox>
+    </ion-item>
+    <ion-item *ngIf="alcool">
+      <ion-label dark stacked>Numero de doses por dia</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Esforço físico intenso</ion-label>
+      <ion-checkbox [(ngModel)]="esforcofisico"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Drogas ilícitas</ion-label>
+      <ion-checkbox [(ngModel)]="drogas"></ion-checkbox>
+    </ion-item>
+
+    <ion-item *ngIf="drogas">
+      <ion-label dark stacked>Qual</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item *ngIf="drogas">
+      <ion-label dark stacked>Quantidade</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label dark >Exposição a agentes químicos e físicos nocivos</ion-label>
+      <ion-checkbox [(ngModel)]="agentesquimicos"></ion-checkbox>
+    </ion-item>
+
+    <ion-item *ngIf="agentesquimicos">
+      <ion-label dark stacked>Quais</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label dark stacked>Fatores estressores</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+</ion-card>
