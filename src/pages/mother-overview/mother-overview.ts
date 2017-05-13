@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { VisitaGenericaPage } from '../visita-generica/visita-generica';
 import { Visita0Page } from '../visita0/visita0';
+import { MothersService } from '../../providers/mothers-service';
 
 @Component({
   selector: 'page-mother-overview',
@@ -10,39 +11,32 @@ import { Visita0Page } from '../visita0/visita0';
 })
 export class MotherOverviewPage {
 
-  mother: {name: string, visita: number};
+  mother: any = {};
   params: {};
-  visitasAnteriores: Array<{n: number, rating: number, name: string, src: string}>;
-  visita: {n: number, rating: number, name: string, src: string};
+  visitasAnteriores: Array<any>;
+  visita: any;
 
-  visitaGenericaPage = VisitaGenericaPage;
-  visita0Page = Visita0Page;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  	this.mother =  this.navParams.get('mother');
-    this.getVisitasAnteriores();
+  constructor(public navCtrl: NavController, public navParams: NavParams, private mothersService: MothersService) {
   }
 
   ionViewDidLoad() {
-    console.log('Hello MotherOverview Page');
+    this.mothersService.getMotherById(this.navParams.get('id')).subscribe(data => {
+      this.mother = data;
+      this.getVisitasAnteriores(data.next_visit);
+    })
   }
 
-  onClick(n_visita: number) {
-  	if (this.mother.visita == 0){
-  		this.navCtrl.push(this.visita0Page);
-  	}
-  	else {
-  		this.params = { n: n_visita };
-  		this.navCtrl.push(this.visitaGenericaPage, this.params);
-  	}
+  onClick(n_visita) {
+    if (n_visita == 0) this.navCtrl.push(Visita0Page);
+    else this.navCtrl.push(VisitaGenericaPage, { n: n_visita });
   }
 
-  getVisitasAnteriores() {
-	this.visitasAnteriores = [];
-  	for (var i = this.mother.visita - 1; i >= 0; i--) {
+  getVisitasAnteriores(n_visit) {
+    this.visitasAnteriores = [];
+    for (var i = n_visit; i >= 0; i--) {
       var r = i % 5 + 1;
-  		this.visita = {n: i, rating: r, name: "Visita " + i, src: "assets/img/" + r + "-alternative2.png"};
-  		this.visitasAnteriores.push(this.visita);
-  	}
+      this.visita = { n: i, rating: r, name: "Visita " + i, src: "assets/img/" + r + "-alternative2.png" };
+      this.visitasAnteriores.push(this.visita);
+    }
   }
 }

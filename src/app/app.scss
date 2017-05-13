@@ -13,6 +13,13 @@
     }
 }
 
+.swiper-pagination-progress{
+    background: rgba(0, 0, 0, 0.1);
+    .swiper-pagination-progressbar{
+        background-color: map-get($colors , primary);
+    }
+}
+
 ion-menu{
     ion-label{
         font-size: 1.4rem;
@@ -23,9 +30,69 @@ ion-menu{
         text-align: center;
         width: 30px;
     }
+    .item{
+        color:rgba(255, 255, 255, 0.8)!important;
+        .item-inner{
+            border-bottom-color: rgba(255, 255, 255, 0.3)!important;
+        }
+    }
+    .user.item{
+        background-color: #016A74;
+        h2{
+            font-size: 1.3rem;
+        }
+        p{
+            color: #bbb;
+            font-size: 1.1rem;
+        }
+    }
+    .bottom-menu{
+        position: absolute;
+        bottom: 0px;
+        padding: 0px;
+        left: 0px;
+        right: 0px;
+        margin: 0;
+        text-align: center;
+
+        ion-row.row{
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        ion-col.col{
+            padding: 0px;
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            button{
+                background: transparent;
+                padding: 6px;
+                text-align: center;
+                height: 60px;
+                width: 100%;
+                margin: 0;
+                line-height: 1.5em;
+                .icon{
+                    margin-right: 0px;
+                    font-size: 2rem!important;
+                }
+                span{
+                    font-size: 1.4rem;
+                }
+            }
+ 
+        }
+
+    }
 }
 
 .ion-page .scroll-content{
     background-color: #ebebeb;
+}
+
+
+ion-label[fixed]{
+    -webkit-flex: 0 0 200px;
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px;
+    width: 200px;
+    max-width: 200px;
 }
 

@@ -1,32 +1,92 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Visita 0</ion-title>
+  <ion-navbar color="pink-dark">
+    <ion-title>
+      {{title}}
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="visita0">
-
-  <identificacao></identificacao>
-
-  <socioeconomicos></socioeconomicos>
-
-  <antecedentes-familiares></antecedentes-familiares>
-
-  <antecedentes-pessoais></antecedentes-pessoais>
-
-  <antecedentes-ginecologicos></antecedentes-ginecologicos>
-
-  <sexualidade></sexualidade>
-
-  <antecedentes-obstetricos></antecedentes-obstetricos>
-
-  <gestacao-atual></gestacao-atual>
-
-  <exame-fisico-visita-0></exame-fisico-visita-0>
-
-  <button (click)="confirmButton()" ion-button color="darkred" class="button" id="confirmar">Confirmar</button>
-  
+  <ion-slides #slide pager="true" paginationType="progress" (ionSlideDidChange)="slideChanged()">
+    <ion-slide>
+      <ion-list>
+        <identificacao></identificacao>
+        <ion-item>
+          <button ion-button clear item-right icon-right (click)="slide.slideNext()">Próximo <ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <socioeconomicos></socioeconomicos>
+        <ion-item>
+          <button ion-button clear item-left icon-left (click)="slide.slidePrev()"><ion-icon name="arrow-back"></ion-icon>Anterior</button>
+          <button ion-button clear item-right icon-right (click)="slide.slideNext()">Próximo <ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <antecedentes-familiares></antecedentes-familiares>
+        <ion-item>
+          <button ion-button clear item-left icon-left (click)="slide.slidePrev()"><ion-icon name="arrow-back"></ion-icon>Anterior</button>
+          <button ion-button clear item-right icon-right (click)="slide.slideNext()">Próximo <ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <antecedentes-pessoais></antecedentes-pessoais>
+        <ion-item>
+          <button ion-button clear item-left icon-left (click)="slide.slidePrev()"><ion-icon name="arrow-back"></ion-icon>Anterior</button>
+          <button ion-button clear item-right icon-right (click)="slide.slideNext()">Próximo <ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <antecedentes-ginecologicos></antecedentes-ginecologicos>
+        <ion-item>
+          <button ion-button clear item-left icon-left (click)="slide.slidePrev()"><ion-icon name="arrow-back"></ion-icon>Anterior</button>
+          <button ion-button clear item-right icon-right (click)="slide.slideNext()">Próximo <ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <sexualidade></sexualidade>
+        <ion-item>
+          <button ion-button clear item-left icon-left (click)="slide.slidePrev()"><ion-icon name="arrow-back"></ion-icon>Anterior</button>
+          <button ion-button clear item-right icon-right (click)="slide.slideNext()">Próximo <ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <antecedentes-obstetricos></antecedentes-obstetricos>
+        <ion-item>
+          <button ion-button clear item-left icon-left (click)="slide.slidePrev()"><ion-icon name="arrow-back"></ion-icon>Anterior</button>
+          <button ion-button clear item-right icon-right (click)="slide.slideNext()">Próximo <ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <gestacao-atual></gestacao-atual>
+        <ion-item>
+          <button ion-button clear item-left icon-left (click)="slide.slidePrev()"><ion-icon name="arrow-back"></ion-icon>Anterior</button>
+          <button ion-button clear item-right icon-right (click)="slide.slideNext()">Próximo <ion-icon name="arrow-forward"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+    <ion-slide>
+      <ion-list>
+        <exame-fisico-visita-0></exame-fisico-visita-0>
+        <ion-item>
+          <button ion-button clear item-left icon-left (click)="slide.slidePrev()"><ion-icon name="arrow-back"></ion-icon>Anterior</button>
+          <button ion-button clear item-right icon-right>Confirmar <ion-icon name="checkmark"></ion-icon></button>
+        </ion-item>
+      </ion-list>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

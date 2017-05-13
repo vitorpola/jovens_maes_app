@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { PdfViewerPage } from '../pdf-viewer/pdf-viewer';
 import { Utils } from '../../providers/utils'
 
 @Component({
@@ -92,7 +91,7 @@ export class LibraryPage {
 
 	openPdf(src: string, pageNum: number) {
 		this.params = { src: "assets/pdf/" + src, page: pageNum };
-		this.navCtrl.push(PdfViewerPage, this.params);
+		this.utils.showToast('Abrir Arquivo')
 	}
 
 }

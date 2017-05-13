@@ -3,7 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
@@ -14,7 +13,6 @@ import { CalendarPage } from '../pages/calendar/calendar';
 import { SearchPage } from '../pages/search/search';
 import { RatingPage } from '../pages/rating/rating';
 import { MotherOverviewPage } from '../pages/mother-overview/mother-overview';
-import { PdfViewerPage } from '../pages/pdf-viewer/pdf-viewer';
 import { LibraryPage } from '../pages/library/library';
 
 import { ExameFisicoGenerico } from '../pages/forms/exame-fisico-generico/exame-fisico-generico';
@@ -42,7 +40,6 @@ import { MothersService } from '../providers/mothers-service';
     MyApp,
     HomePage,
     LoginPage,
-
     Visita0Page,
     VisitaGenericaPage,
     AboutPage,

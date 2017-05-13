@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { NavParams } from 'ionic-angular';
 
-/*
-  Generated class for the Visita1Page page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   templateUrl: 'visita-generica.html',
 })
@@ -20,8 +14,8 @@ export class VisitaGenericaPage {
 	constructor(public navParams: NavParams) {
 		this.visitNumber =  this.navParams.get('n');
   	this.pageTitle = "Visita " + this.visitNumber;
-    this.planoAnterior = "Loremipsum dolor sit amet, in mel adhuc expetenda mnesarchum. Cu sea delenit nonumes gubergren, te tation propriae corrumpit mea. Vel dicit aliquid sensibus ad, pro et homero vituperatoribus, corrumpit percipitur contentiones ei quo. Mollis melius sit ea. Brute tempor persequeris ea pri, mel ne nobis nullam. Sumo fabellas prodesset vel cu, tollit menandri repudiare ut cum. \nPraesent suavitate vis ei, has ut adhuc nostro commodo. Atqui veniam consul an sit, et qui essent gubergren intellegebat. His purto singulis mandamus an, ne ius nibh munere forensibus, mea eu consul blandit constituam. Eos ad novum voluptua platonem. Sensibus tractatos referrentur mea ne, ad usu doming adolescens. Id modo fastidii interpretaris cum, quo cu veritus fuisset.";
-    this.impressoesAnteriores = "Aperiri fastidii sed ea, vel conceptam philosophia ei, falli indoctum ne sea. Aeque saepe qui id, ei mea torquatos omittantur, ius an urbanitas honestatis. Ad est sonet assueverit, est ea magna oporteat consectetuer. Erat accusata ut has, impetus feugait placerat cu ius. Libris contentiones cu usu, tota possim efficiantur sed no. Ut graeci debitis ius. Fierent reformidans pri ea, qui cu libris malorum graecis. Brute harum mel ne. No labore definitionem his, mel eros dolor et.";;
+    this.planoAnterior = "Caros amigos, a execução dos pontos do programa oferece uma interessante oportunidade para verificação dos conhecimentos estratégicos para atingir a excelência. Por outro lado, o julgamento imparcial das eventualidades agrega valor ao estabelecimento do levantamento das variáveis envolvidas. Assim mesmo, o consenso sobre a necessidade de qualificação exige a precisão e a definição de todos os recursos funcionais envolvidos. No entanto, não podemos esquecer que a revolução dos costumes ainda não demonstrou convincentemente que vai participar na mudança das regras de conduta normativas. Evidentemente, a determinação clara de objetivos apresenta tendências no sentido de aprovar a manutenção das novas proposições. Pensando mais a longo prazo, o desenvolvimento contínuo de distintas formas de atuação assume importantes posições no estabelecimento dos paradigmas corporativos. Acima de tudo, é fundamental ressaltar que o início da atividade geral de formação de atitudes cumpre um papel essencial na formulação do remanejamento dos quadros funcionais.";
+    this.impressoesAnteriores = "As experiências acumuladas demonstram que a competitividade nas transações comerciais deve passar por modificações independentemente do impacto na agilidade decisória. Percebemos, cada vez mais, que a expansão dos mercados mundiais causa impacto indireto na reavaliação das diversas correntes de pensamento. O cuidado em identificar pontos críticos no comprometimento entre as equipes acarreta um processo de reformulação e modernização das formas de ação."
  	}
 
 }

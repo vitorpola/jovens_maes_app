@@ -1,52 +1,51 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
-import {Observable} from 'rxjs/Rx';
-/*
-  Generated class for the MothersService provider.
 
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-  	*/
-  @Injectable()
-  export class MothersService {
-  	data: any
-  	constructor(public http: Http) {
-  		console.log('Hello MothersService Provider');
-  	}
+@Injectable()
+export class MothersService {
 
-  	load() {
-  		if (this.data) {
-  			// already loaded data
-  			return Promise.resolve(this.data);
-  		}
+	private mothers: Array<any>
 
-  		// don't have the data yet
-  		return new Promise(resolve => {
-  			// We're using Angular HTTP provider to request the data,
-  			// then on the response, it'll map the JSON data to a parsed JS object.
-  			// Next, we process the data and resolve the promise with the new data.
-  			this.http.get('path/to/data.json')
-  			.map(res => res.json())
-  			.subscribe(data => {
-  				// we've got back the raw data, now generate the core schedule data
-  				// and save the data for later reference
-  				this.data = data;
-  				resolve(this.data);
-  			});
-  		});
-  	}
+	constructor() {
+		this.mothers = [
+			{ id: 1, name: 'Helena Laura Marina Barros', next_visit: 4, start_at: new Date(), level: 1, unit: 'UBS Sta. Marcelina' },
+			{ id: 2, name: 'Natália Mariana Betina Souza', next_visit: 8, start_at: new Date(), level: 1, unit: 'UBS Consolação' },
+			{ id: 3, name: 'Joana Débora Sarah Lima', next_visit: 1, start_at: new Date(), level: 2, unit: 'UBS Indianópolis' },
+			{ id: 4, name: 'Emanuelly Nicole dos Santos', next_visit: 0, start_at: new Date(), level: 1, unit: 'UBS Santo Amaro' },
+			{ id: 5, name: 'Melissa Sophia Bárbara Cardoso', next_visit: 10, start_at: new Date(), level: 2, unit: 'UBS Parque Esmeralda' },
+		];
+	}
 
-  	post(mother: any) {
-  		this.http.post('https://jmcserver.herokuapp.com/api/v1/mothers', mother)
-  		.subscribe(m => {
-                console.log(m);
-                return true;
-            }, error => {
-                console.log(error);
-                return false;
-            });
+	public getMothers() {
+		return Observable.create(observer => {
+			observer.next(this.mothers);
+			observer.complete();
+		});
+	}
 
-  	}
-  }
+	public getMotherById(id) {
+		return Observable.create(observer => {
+			for (var i = 0; i < this.mothers.length; i++) {
+				if (this.mothers[i].id == id) {
+					observer.next(this.mothers[i]);
+					observer.complete();
+					break;
+				}
+			}
+		});
+	}
+
+	/*post(mother: any) {
+		this.http.post('https://jmcserver.herokuapp.com/api/v1/mothers', mother)
+			.subscribe(m => {
+				console.log(m);
+				return true;
+			}, error => {
+				console.log(error);
+				return false;
+			});
+
+	}*/
+}
 

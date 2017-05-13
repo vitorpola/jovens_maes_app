@@ -1,20 +1,15 @@
 <ion-header>
-    <ion-navbar>
-        <button ion-button menuToggle="menu">
-          <ion-icon name="menu"></ion-icon>
-        </button>
-        <ion-title>
-            {{mother.name}}
-        </ion-title>
-    </ion-navbar>
+	<ion-navbar color="pink-dark">
+		<ion-title>
+			{{mother.name}}
+		</ion-title>
+	</ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-
 	<ion-list>
 		<ion-list-header class="list-title">Próxima Visita</ion-list-header>
-		<button ion-item (click)="onClick(mother.visita)">
+		<button ion-item (click)="onClick(mother.next_visit)">
 			<ion-avatar item-left>
 	      		<img src="assets/img/6-alternative2.png">
 	    	</ion-avatar>

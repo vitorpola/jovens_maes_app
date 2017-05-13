@@ -1,90 +1,84 @@
-<ion-card>
-  <ion-card-header> Antecedentes obstétricos </ion-card-header>
-  <ion-list>
-    <ion-item>
-      <ion-label dark stacked>Número de gestações</ion-label>
-      <ion-input type="number" min="0" placeholder="Ex: 3"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Número de gestações</ion-label>
+  <ion-input type="number" min="0" placeholder="Ex: 3"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Número de abortos</ion-label>
-      <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Número de abortos</ion-label>
+  <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark>Gravidez ectópica</ion-label>
-      <ion-checkbox [(ngModel)]="gravidezectopica"></ion-checkbox>
-    </ion-item>
+<ion-item>
+  <ion-label>Gravidez ectópica</ion-label>
+  <ion-toggle [(ngModel)]="gravidezectopica"></ion-toggle>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Número de partos</ion-label>
-      <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Número de partos</ion-label>
+  <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Domiciliares</ion-label>
-      <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Domiciliares</ion-label>
+  <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Hospitalares</ion-label>
-      <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Hospitalares</ion-label>
+  <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Vaginais</ion-label>
-      <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Vaginais</ion-label>
+  <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Cesarianas</ion-label>
-      <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Cesarianas</ion-label>
+  <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Fórceps</ion-label>
-      <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Fórceps</ion-label>
+  <ion-input type="number" min="0" placeholder="Ex: 0"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Indicação</ion-label>
-      <ion-input placeholder=""></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Indicação</ion-label>
+  <ion-input placeholder=""></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Número de filhos vivos</ion-label>
-      <ion-input type="number" min="0" placeholder="Ex: 2"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Número de filhos vivos</ion-label>
+  <ion-input type="number" min="0" placeholder="Ex: 2"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Idade na primeira gestação</ion-label>
-      <ion-input type="number" min="0" placeholder="Ex: 20 anos"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Idade na primeira gestação</ion-label>
+  <ion-input type="number" min="0" placeholder="Ex: 20 anos"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Intervalo das gestações</ion-label>
-      <ion-input type="number" min="0" placeholder="Ex: 12 meses"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Intervalo das gestações</ion-label>
+  <ion-input type="number" min="0" placeholder="Ex: 12 meses"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark>Morte neonatal</ion-label>
-      <ion-checkbox [(ngModel)]="morteneonatal"></ion-checkbox>
-    </ion-item>
+<ion-item>
+  <ion-label>Morte neonatal</ion-label>
+  <ion-toggle [(ngModel)]="morteneonatal"></ion-toggle>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark>Natimortos</ion-label>
-      <ion-checkbox [(ngModel)]="natimortos"></ion-checkbox>
-    </ion-item>
+<ion-item>
+  <ion-label>Natimortos</ion-label>
+  <ion-toggle [(ngModel)]="natimortos"></ion-toggle>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark>Intercorrências ou complicações em gestações e puerpério anteriores</ion-label>
-      <ion-checkbox [(ngModel)]="complicacoesanteriores"></ion-checkbox>
-    </ion-item>
+<ion-item>
+  <ion-label>Intercorrências ou complicações em gestações e puerpério anteriores</ion-label>
+  <ion-toggle [(ngModel)]="complicacoesanteriores"></ion-toggle>
+</ion-item>
 
-    <ion-item *ngIf="complicacoesanteriores">
-      <ion-label dark stacked>Descreva</ion-label>
-      <ion-textarea></ion-textarea>
-    </ion-item>
-
-  </ion-list>
-</ion-card>
+<ion-item *ngIf="complicacoesanteriores">
+  <ion-label fixed>Descreva</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>

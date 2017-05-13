@@ -1,57 +1,49 @@
-<ion-card>
-  <ion-card-header> Sexualidade </ion-card-header>
-  <ion-list>
+<ion-item>
+  <ion-label fixed>Início da atividade sexual</ion-label>
+  <ion-input placeholder="Idade"></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Início da atividade sexual</ion-label>
-      <ion-input placeholder="Idade"></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Frequência</ion-label>
+  <ion-input></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Frequência</ion-label>
-      <ion-input ></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label dark>Dispareunia</ion-label>
+  <ion-toggle></ion-toggle>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark>Dispareunia</ion-label>
-      <ion-checkbox></ion-checkbox>
-    </ion-item>
+<ion-item>
+  <ion-label dark>Prática sexual na gestação</ion-label>
+  <ion-toggle [(ngModel)]="praticasexual"></ion-toggle>
+</ion-item>
 
+<ion-item *ngIf="!praticasexual">
+  <ion-label fixed>Motivo</ion-label>
+  <ion-input></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark>Prática sexual na gestação</ion-label>
-      <ion-checkbox [(ngModel)]="praticasexual"></ion-checkbox>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Número de parceiros pregressos</ion-label>
+  <ion-input></ion-input>
+</ion-item>
 
-    <ion-item *ngIf="!praticasexual">
-      <ion-label dark stacked>Motivo</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Número de parceiros atuais</ion-label>
+  <ion-input></ion-input>
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Número de parceiros pregressos</ion-label>
-      <ion-input ></ion-input>
-    </ion-item>
+<ion-item>
+  <ion-label fixed>Uso de preservativos</ion-label>
+  <ion-select [(ngModel)]="preservativo">
+    <ion-option value="sempre">Sempre</ion-option>
+    <ion-option value="eventualmente">Eventualmente</ion-option>
+    <ion-option value="raramente">Raramente</ion-option>
+    <ion-option value="nao">Não</ion-option>
+  </ion-select> 
+</ion-item>
 
-    <ion-item>
-      <ion-label dark stacked>Número de parceiros atuais</ion-label>
-      <ion-input ></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label dark stacked>Uso de preservativos</ion-label>
-      <ion-select [(ngModel)]="preservativo">
-        <ion-option value="sempre">Sempre</ion-option>
-        <ion-option value="eventualmente">Eventualmente</ion-option>
-        <ion-option value="raramente">Raramente</ion-option>
-        <ion-option value="nao">Não</ion-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item *ngIf="preservativo == 'sempre' || preservativo == 'eventualmente' || preservativo == 'raramente'">
-        <ion-label dark stacked>Qual?</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-
-  </ion-list>
-</ion-card>
+<ion-item *ngIf="preservativo != 'nao'">
+  <ion-label fixed>Qual?</ion-label>
+  <ion-input></ion-input>
+</ion-item>

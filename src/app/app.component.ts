@@ -24,11 +24,10 @@ export class MyApp {
 
   constructor(private platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private utils: Utils) {
     this.pages = [
-      { title: 'Home', component: HomePage, icon: 'home' },
+      { title: 'Visão Geral', component: HomePage, icon: 'md-speedometer' },
       { title: 'Biblioteca', component: LibraryPage, icon: 'bookmarks' },
-      { title: 'Consultas', component: SearchPage, icon: 'search' },
+      { title: 'Prontuário', component: SearchPage, icon: 'md-filing' },
       { title: 'Agenda', component: CalendarPage, icon: 'calendar' },
-      { title: 'Sobre', component: AboutPage, icon: 'information-circle' },
     ];
     platform.ready().then(() => {
       statusBar.styleDefault();

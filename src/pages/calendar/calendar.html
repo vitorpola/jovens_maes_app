@@ -1,8 +1,47 @@
 <ion-header>
   <ion-navbar color="pink-dark">
+    <ion-title>
+      Agenda
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-   Página em construção!
+   <ion-grid>
+      <ion-row>
+          <ion-col></ion-col>
+          <ion-col>Seg</ion-col>
+          <ion-col>Ter</ion-col>
+          <ion-col>Qua</ion-col>
+          <ion-col>Qui</ion-col>
+          <ion-col>Sex</ion-col>
+          <ion-col>Sab</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let h of hours">
+          <ion-col>{{h}}</ion-col>
+          <ion-col></ion-col>
+          <ion-col></ion-col>
+          <ion-col></ion-col>
+          <ion-col></ion-col>
+          <ion-col></ion-col>
+          <ion-col></ion-col>
+          <ion-col></ion-col>
+      </ion-row>
+      
+
+
+
+
+
+
+   </ion-grid>
+
+
+
+   
+
+
+
+
+
 </ion-content>
